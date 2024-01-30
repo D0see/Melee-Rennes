@@ -74,6 +74,7 @@ h2 {
     
 }
 h4 {
+    word-spacing: 0.10em;
     text-transform: uppercase;
     background-color: black;
     color: white;
@@ -90,6 +91,17 @@ h5 {
     margin-bottom: 10%;
 }
 
+h6 {
+    font-family: 'Rock Salt', cursive;
+}
+
+#Tag {
+    position: absolute;
+    top: 2.3%;
+    right: 31%;
+    rotate: -20deg;
+    font-weight: 500;
+}
 nav {
     text-align: center;
     display: grid;
