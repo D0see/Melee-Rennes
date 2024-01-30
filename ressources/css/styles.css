@@ -230,7 +230,8 @@ tfoot {
 iframe {
     display: block;
     margin: 0 auto;
-    width: 700px;
+    width: 40%;
+    min-width: 600px;
     height: 500px;
     
 }
