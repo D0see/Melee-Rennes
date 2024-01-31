@@ -13,7 +13,7 @@ main {
 
 body {
     background-color: white;
-    Width: 100%;
+    width: 100%;
     margin: 0 auto;
     color: black;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -102,6 +102,7 @@ h6 {
     rotate: -20deg;
     font-weight: 500;
 }
+
 nav {
     text-align: center;
     display: grid;
@@ -134,10 +135,6 @@ nav {
 
 }
 
-#navbartrigger:hover nav {
-    transform: translate(0px,40px);
-}
-
 nav > ul, #TableOfContent {
     position: relative;
     left: -2px;
@@ -148,7 +145,19 @@ nav > ul, #TableOfContent {
     color: rgb(255, 255, 255);
 }
 
-nav > ul > li, #TableOfContent > li {
+#navbartrigger:hover nav {
+    transform: translate(0px,40px);
+}
+
+#TableOfContent > li:hover {
+    /*background-color: rgb(100, 100, 100);*/
+    border: 1px solid white;
+}
+#TableOfContent > li:active {
+    transform: scale(0.9);
+}
+#TableOfContent > li {
+    transition: transform 0.15s ease, border 0.35s cubic-bezier(.77,.1,.12,.8);
     position: relative;
     border: 1px solid black;
     bottom: 2px;
@@ -160,11 +169,6 @@ nav > ul > li, #TableOfContent > li {
 nav a {
     text-decoration: none;
     color: rgb(255, 255, 255);
-}
-
-#TableOfContent > li:hover {
-    /*background-color: rgb(100, 100, 100);*/
-    border: 1px solid white;
 }
 
 #historyimg {
@@ -242,6 +246,7 @@ tfoot {
 }
 
 iframe {
+    cursor: url("../images/icons8-cursor-30.png"), auto;
     display: block;
     margin: 0 auto;
     width: 40%;
@@ -337,18 +342,21 @@ footer {
 }
 
 #visiblefooter {
+    transition: color 0.30s ease;
     font-size: 15px;
     position: absolute;
     z-index: 2;
 }
 
 #hiddenfooter {
+    transition: transform 0.15s ease, border 0.15s cubic-bezier(.77,.1,.12,.8), color 0.30s ease-in 0.30s;
     border: 1px solid black;
     position: absolute;
     color: black;
     text-align: center;
     z-index: 1;
     text-decoration: none;
+    visibility: hidden;
 }
 
 footer:hover #visiblefooter {
@@ -360,6 +368,12 @@ footer:hover #hiddenfooter {
     border-radius: 5px;
     color: white;
     z-index: 3;
+    visibility: visible;
+}
+
+#hiddenfooter:active {
+    transform: scale(0.9);
+
 }
 
 #hiddenfooter:hover {
